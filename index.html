@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dwight Hewitt - Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+      <div class="container">
+        <h1>Hi, I'm Dwight Hewitt</h1>
+        <p>
+          Welcome to my portfolio! I’m a web developer in training,
+          transitioning from a 24-year career in flooring to creating modern,
+          user-friendly websites.
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <!-- Profile Picture -->
+          <img
+            src="images/14827.JPG"
+            alt="Profile picture of Dwight Hewitt"
+            class="profile-pic"
+          />
+          <div class="about-text">
+            <p>
+              Hi, my name is <strong>Dwight Hewitt</strong>. I’m 39 years old
+              and have been a professional floor installer for the past 24
+              years. Over the years, I’ve honed my skills in craftsmanship,
+              problem-solving, and attention to detail, which I’m now channeling
+              into the world of web development.
+            </p>
+            <p>
+              About a year ago, I discovered a passion for programming and began
+              learning Python, which opened the door to endless possibilities.
+              Currently, I’m pursuing a bachelor’s degree in web development,
+              where I’m building a strong foundation in HTML, CSS, and
+              JavaScript. I’ve been enjoying every moment of this journey, and
+              I’m excited about combining my technical skills and creativity to
+              build modern, user-friendly websites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div id="project-list">
+          <div class="project">
+            <img
+              src="images/project-placeholder.png"
+              alt="Python Task Manager Screenshot"
+            />
+            <h3>Python Task Manager</h3>
+            <p>
+              A command-line tool for managing tasks. It allows users to add,
+              update, delete, and store tasks locally.
+              <a href="#" target="_blank">View on GitHub</a>
+            </p>
+          </div>
+          <div class="project">
+            <img
+              src="images/project-placeholder.png"
+              alt="Portfolio Website Screenshot"
+            />
+            <h3>Portfolio Website</h3>
+            <p>
+              The website you’re currently viewing, built using HTML, CSS, and
+              JavaScript. It showcases my skills, projects, and contact
+              information. <a href="#" target="_blank">View on GitHub</a>
+            </p>
+          </div>
+          <div class="project">
+            <img
+              src="images/project-placeholder.png"
+              alt="Data Analysis Script Screenshot"
+            />
+            <h3>Data Analysis Script</h3>
+            <p>
+              A Python script analyzing and visualizing weather data using
+              Pandas and Matplotlib.
+              <a href="#" target="_blank">View on GitHub</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/xjkkpwer"
+          method="POST"
+        >
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+          />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="_replyto"
+            placeholder="Your Email"
+            required
+          />
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <p>
+          &copy; <span id="current-year">2024</span> Dwight Hewitt. All Rights
+          Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
