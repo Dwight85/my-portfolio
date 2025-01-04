@@ -36,12 +36,7 @@
       <div class="container">
         <h2>About Me</h2>
         <div class="about-content">
-          <!-- Profile Picture -->
-          <img
-            src="images/14827.JPG"
-            alt="Profile picture of Dwight Hewitt"
-            class="profile-pic"
-          />
+          <img src="images/14827.JPG" alt="Dwight Hewitt" class="profile-pic" />
           <div class="about-text">
             <p>
               Hi, my name is <strong>Dwight Hewitt</strong>. I’m 39 years old
@@ -68,43 +63,47 @@
     <section id="projects">
       <div class="container">
         <h2>Projects</h2>
-        <div id="project-list">
-          <div class="project">
-            <img
-              src="images/project-placeholder.png"
-              alt="Python Task Manager Screenshot"
-            />
-            <h3>Python Task Manager</h3>
-            <p>
-              A command-line tool for managing tasks. It allows users to add,
-              update, delete, and store tasks locally.
-              <a href="#" target="_blank">View on GitHub</a>
-            </p>
-          </div>
-          <div class="project">
-            <img
-              src="images/project-placeholder.png"
-              alt="Portfolio Website Screenshot"
-            />
-            <h3>Portfolio Website</h3>
-            <p>
-              The website you’re currently viewing, built using HTML, CSS, and
-              JavaScript. It showcases my skills, projects, and contact
-              information. <a href="#" target="_blank">View on GitHub</a>
-            </p>
-          </div>
-          <div class="project">
-            <img
-              src="images/project-placeholder.png"
-              alt="Data Analysis Script Screenshot"
-            />
-            <h3>Data Analysis Script</h3>
-            <p>
-              A Python script analyzing and visualizing weather data using
-              Pandas and Matplotlib.
-              <a href="#" target="_blank">View on GitHub</a>
-            </p>
-          </div>
+
+        <!-- Portfolio Project -->
+        <div class="project-card">
+          <h3>Portfolio Project</h3>
+          <p>
+            A modern and responsive portfolio website built with HTML, CSS, and
+            JavaScript to showcase my projects and skills.
+          </p>
+          <a
+            href="https://github.com/Dwight85/my-portfolio"
+            target="_blank"
+            class="btn"
+            >View on GitHub</a
+          >
+        </div>
+
+        <!-- Python Task Manager Project -->
+        <div class="project-card">
+          <h3>Python Task Manager</h3>
+          <p>
+            A command-line application for managing tasks with features like
+            deadlines, priorities, and sorting.
+          </p>
+          <ul>
+            <li>Add, view, mark, and delete tasks.</li>
+            <li>Sort tasks by deadlines or priorities.</li>
+            <li>Data persistence with JSON.</li>
+            <li>Interactive task display using PrettyTable.</li>
+          </ul>
+          <a
+            href="https://github.com/Dwight85/python-task-manager"
+            target="_blank"
+            class="btn"
+            >View on GitHub</a
+          >
+        </div>
+
+        <!-- Data Analysis Script Project -->
+        <div class="project-card">
+          <h3>Data Analysis Script</h3>
+          <p>Coming soon!</p>
         </div>
       </div>
     </section>
@@ -119,28 +118,11 @@
           method="POST"
         >
           <label for="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your Name"
-            required
-          />
+          <input type="text" id="name" name="name" required />
           <label for="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="_replyto"
-            placeholder="Your Email"
-            required
-          />
+          <input type="email" id="email" name="_replyto" required />
           <label for="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Your Message"
-            required
-          ></textarea>
+          <textarea id="message" name="message" required></textarea>
           <button type="submit">Send</button>
         </form>
       </div>
@@ -150,7 +132,7 @@
     <footer>
       <div class="container">
         <p>
-          &copy; <span id="current-year">2024</span> Dwight Hewitt. All Rights
+          &copy; <span id="current-year">2025</span> Dwight Hewitt. All Rights
           Reserved.
         </p>
       </div>
