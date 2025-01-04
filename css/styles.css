@@ -56,7 +56,6 @@ header nav ul li a {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   transition: background 0.3s ease, color 0.3s ease;
-  cursor: pointer;
 }
 
 header nav ul li a:hover {
@@ -82,16 +81,17 @@ header nav ul li a.active {
   text-align: center;
   padding: 20px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 #home h1 {
-  color: #023047;
+  color: var(--header-footer-bg);
   font-size: 3.5rem;
   margin-bottom: 10px;
 }
 
 #home p {
-  color: #112d4e;
+  color: var(--text-color);
   font-size: 1.2rem;
   max-width: 600px;
   margin: 0 auto;
@@ -101,6 +101,13 @@ header nav ul li a.active {
 #about {
   padding: 60px 20px;
   background: var(--background-color);
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--secondary-color);
+  text-align: center;
 }
 
 .about-content {
@@ -133,9 +140,8 @@ header nav ul li a.active {
 /* Projects Section */
 #projects {
   padding: 60px 20px;
+  background: #f7fafc;
   text-align: center;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
 }
 
 #projects h2 {
@@ -144,31 +150,124 @@ header nav ul li a.active {
   color: var(--secondary-color);
 }
 
-#project-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.project {
-  background: #fff;
+.project-card {
+  background: #ffffff;
   border: 1px solid var(--card-shadow);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px var(--card-shadow);
+  border-radius: 8px;
   padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 2px 5px var(--card-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.project img {
-  width: 100%;
-  border-radius: 10px;
+.project-card h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
   margin-bottom: 10px;
+}
+
+.project-card img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px var(--card-shadow);
+}
+
+.project-card p {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.project-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-card ul li {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.project-card a.btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.project-card a.btn:hover {
+  background: var(--secondary-color);
+}
+
+/* Responsive layout for project cards */
+@media (max-width: 768px) {
+  #projects {
+    padding: 20px 10px; /* Adjust spacing on mobile */
+  }
+
+  .project-card {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content on mobile */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .project-card img {
+    width: 90%; /* Ensure the image fits within the screen */
+    max-width: 300px; /* Set a max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  .project-card p {
+    font-size: 0.95rem; /* Slightly smaller text for mobile */
+    margin: 10px 0;
+  }
+
+  .project-card ul {
+    padding-left: 15px;
+    margin: 10px auto;
+  }
+
+  .project-card li {
+    font-size: 0.9rem; /* Slightly smaller list text */
+    margin-bottom: 8px;
+    text-align: left;
+  }
+
+  .project-card a.btn {
+    font-size: 1rem;
+    padding: 10px 15px;
+    width: 80%; /* Make buttons fit smaller screens */
+    text-align: center;
+    margin: 15px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    width: 100%; /* Full width for mobile */
+    margin: 10px 0;
+  }
+
+  .project-card img {
+    width: 100%;
+    max-width: 250px; /* Cap the image size */
+    margin-bottom: 10px;
+  }
 }
 
 /* Contact Section */
@@ -222,12 +321,11 @@ form button {
   font-size: 1rem;
   padding: 10px 20px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 form button:hover {
   background: var(--secondary-color);
-  transform: scale(1.05);
 }
 
 /* Footer */
@@ -238,35 +336,16 @@ footer {
   padding: 20px 0;
 }
 
+footer p {
+  margin: 0;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Media Queries for Small Devices */
-@media (max-width: 768px) {
-  header nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .about-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .profile-pic {
-    margin-bottom: 20px;
-  }
-
-  #project-list {
-    flex-direction: column;
   }
 }
